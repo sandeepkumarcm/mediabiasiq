@@ -1,0 +1,52 @@
+# ── Scraping ──────────────────────────────────────────────
+newspaper3k==0.2.8
+beautifulsoup4==4.12.3
+requests==2.31.0
+lxml==4.9.4
+lxml_html_clean==0.1.1
+Pillow==10.3.0
+
+# ── ML / Transformers ─────────────────────────────────────
+torch==2.2.2
+transformers==4.40.1
+datasets==2.19.1
+accelerate==0.29.3
+sentencepiece==0.2.0
+tokenizers==0.19.1
+
+# ── Explainability ────────────────────────────────────────
+shap==0.45.0
+numpy==1.26.4
+
+# ── LLM Rewriting ─────────────────────────────────────────
+openai==1.25.1
+
+# ── Charts ────────────────────────────────────────────────
+plotly==5.21.0
+
+# ── UI ────────────────────────────────────────────────────
+streamlit==1.33.0
+
+# ── Metrics ───────────────────────────────────────────────
+scikit-learn==1.4.2
+pandas==2.2.2
+
+# ── Security / Environment ────────────────────────────────
+python-dotenv==1.0.1
+
+# ── Progress bars ─────────────────────────────────────────
+tqdm==4.66.2
+
+# ── Misc dependencies (needed by above libraries) ─────────
+scipy==1.13.0
+matplotlib==3.8.4
+seaborn==0.13.2
+huggingface-hub==0.22.2
+safetensors==0.4.3
+packaging==24.0
+filelock==3.13.4
+typing_extensions==4.11.0
+
+
+
+fpdf2

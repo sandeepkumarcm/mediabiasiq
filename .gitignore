@@ -1,0 +1,48 @@
+# ── Secrets — NEVER push these ────────────────────────────
+.env
+
+# ── Model files — too large for GitHub ────────────────────
+model/saved_model/
+*.bin
+*.pt
+*.pth
+
+# ── Virtual environment — never push ──────────────────────
+venv/
+env/
+.venv/
+
+# ── Python cache ──────────────────────────────────────────
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+
+# ── Generated evaluation files ────────────────────────────
+dashboard/confusion_matrix.png
+dashboard/metrics.json
+
+# ── OS files ──────────────────────────────────────────────
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ── VS Code settings ──────────────────────────────────────
+.vscode/
+
+# ── Jupyter Notebooks checkpoints ────────────────────────
+.ipynb_checkpoints/
+
+# ── Build / dist ─────────────────────────────────────────
+build/
+dist/
+*.egg-info/
+
+# ── Logs ─────────────────────────────────────────────────
+*.log
+logs/
+
+# ── Temporary files ───────────────────────────────────────
+*.tmp
+*.temp
