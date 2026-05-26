@@ -5,20 +5,16 @@ import torch.nn.functional as F
 from transformers import DistilBertTokenizerFast, DistilBertForSequenceClassification, pipeline
 
 # ── Path setup ────────────────────────────────────────────
-BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-MODEL_PATH = os.path.join(BASE_DIR, "model", "saved_model")
+MODEL_PATH = "sandeepcm/news-bias-distilbert"
 
 # ── Label mapping ─────────────────────────────────────────
 id2label = {0: "LEFT", 1: "CENTER", 2: "RIGHT"}
 label2id = {"LEFT": 0, "CENTER": 1, "RIGHT": 2}
 
 # Load label_config.json if exists
-label_config_path = os.path.join(MODEL_PATH, "label_config.json")
-if os.path.exists(label_config_path):
-    with open(label_config_path, "r") as f:
-        config = json.load(f)
-        id2label = {int(k): v for k, v in config.get("id2label", id2label).items()}
-        label2id = config.get("label2id", label2id)
+# Labels are hardcoded — model loads from HuggingFace Hub
+id2label = {0: "LEFT", 1: "CENTER", 2: "RIGHT"}
+label2id = {"LEFT": 0, "CENTER": 1, "RIGHT": 2}
 
 # ── Device setup ──────────────────────────────────────────
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
@@ -30,10 +26,9 @@ _pipeline = None
 
 def _load_model():
     global tokenizer, model
-    if not os.path.exists(MODEL_PATH):
-        print(f"ERROR: saved_model folder not found at {MODEL_PATH}")
-        print("Please run Colab training first and copy saved_model to model/saved_model/")
-        return False
+    if not MODEL_PATH:
+       print("ERROR: Model path not set")
+       return False
     try:
         tokenizer = DistilBertTokenizerFast.from_pretrained(MODEL_PATH)
         model = DistilBertForSequenceClassification.from_pretrained(MODEL_PATH)
