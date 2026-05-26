@@ -225,9 +225,9 @@ for k, v in defaults.items():
 
 # ── Example URLs ──────────────────────────────────────────
 EXAMPLE_URLS = {
-    "fox": "https://www.foxnews.com/politics/trump-says-he-will-not-fire-fed-chair-jerome-powell",
-    "bbc": "https://www.bbc.com/news/articles/c3evnv2neqno",
-    "ndtv": "https://www.ndtv.com/india-news/pm-modi-chairs-meeting-on-operation-sindoor-amit-shah-rajnath-singh-present-8368292"
+    "fox": "https://www.foxnews.com/politics",
+    "bbc": "https://www.bbc.com/news/world",
+    "ndtv": "https://www.ndtv.com/topic/politics"
 }
 
 # ── Helper Functions ──────────────────────────────────────
