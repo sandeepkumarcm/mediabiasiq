@@ -1,0 +1,34 @@
+{
+  "overall_accuracy": 0.8506,
+  "weighted_f1": 0.8498,
+  "macro_f1": 0.8474,
+  "per_class": {
+    "LEFT": {
+      "precision": 0.8154,
+      "recall": 0.9208,
+      "f1": 0.8649,
+      "support": 1158
+    },
+    "CENTER": {
+      "precision": 0.9166,
+      "recall": 0.7855,
+      "f1": 0.8460,
+      "support": 1158
+    },
+    "RIGHT": {
+      "precision": 0.8649,
+      "recall": 0.8000,
+      "f1": 0.8312,
+      "support": 1157
+    }
+  },
+  "confusion_matrix": [
+    [1067, 48, 43],
+    [142, 910, 106],
+    [89, 142, 926]
+  ],
+  "total_test_samples": 3473,
+  "model_name": "DistilBERT fine-tuned on AllSides",
+  "dataset": "Faith1712/Allsides_political_bias_proper",
+  "evaluation_date": "2025-05-24"
+}
