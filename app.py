@@ -225,9 +225,9 @@ for k, v in defaults.items():
 
 # ── Example URLs ──────────────────────────────────────────
 EXAMPLE_URLS = {
-    "fox": "https://www.foxnews.com/politics",
-    "bbc": "https://www.bbc.com/news/world",
-    "ndtv": "https://timesofindia.indiatimes.com/city/vijayawada/sharmila-likely-to-be-nominated-to-rajya-sabha-from-karnataka/articleshow/131397884.cms"
+    "fox": "https://www.foxnews.com/politics/trump-threatened-blow-up-oman-why-tiny-gulf-kingdom-caught-between-dc-iran",
+    "bbc": "https://www.bbc.com/news/world-asia-india-37346570",
+    "the hindu": "https://www.thehindu.com/news/national/karnataka/karnataka-cm-news-leadership-change-live-updates-dk-shivakumar-siddaramaiah-congress-meet-rajya-sabha-seat-may-28-2026/article71029253.ece"
 }
 
 # ── Helper Functions ──────────────────────────────────────
@@ -654,12 +654,13 @@ def run_analysis(url):
         return False
 
 # ── HEADER ────────────────────────────────────────────────
+# ── HEADER ────────────────────────────────────────────────
 st.markdown("""
 <div class="main-header">
     <div class="main-title">🔍 MediaBiasIQ</div>
-    <div class="main-subtitle">Detect political bias • Explain which sentences caused it • Rewrite in neutral tone using AI</div>
+    <div class="main-subtitle">Detect LEFT • CENTER • RIGHT political bias • Sentence-level SHAP explainability • GPT-3.5 neutral rewriter</div>
     <div style="margin-top:12px;color:#475569;font-size:0.85rem;">
-        Powered by DistilBERT fine-tuned on AllSides dataset • GPT-3.5 Neutral Rewriter • Explainable AI
+        DistilBERT fine-tuned on Faith1712/Allsides_political_bias_proper (17,362 articles) &nbsp;•&nbsp; 85.06% accuracy &nbsp;•&nbsp; GPT-3.5 Rewriter &nbsp;•&nbsp; Explainable AI
     </div>
 </div>
 """, unsafe_allow_html=True)
@@ -722,7 +723,7 @@ with ex_col2:
             run_analysis(EXAMPLE_URLS["bbc"])
         st.rerun()
 with ex_col3:
-    if st.button("📰 NDTV Example", use_container_width=True):
+    if st.button("📰 The Hindu", use_container_width=True):
         if time.time() - st.session_state.last_analysis_time >= 2:
             run_analysis(EXAMPLE_URLS["ndtv"])
         st.rerun()
