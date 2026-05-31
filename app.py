@@ -227,7 +227,7 @@ for k, v in defaults.items():
 EXAMPLE_URLS = {
     "fox": "https://www.foxnews.com/politics",
     "bbc": "https://www.bbc.com/news/world",
-    "ndtv": "https://www.ndtv.com/india-news/siddaramaiah-not-interested-in-taking-rajya-sabha-post-sources-11557464"
+    "ndtv": "https://timesofindia.indiatimes.com/india/rubio-meets-pm-modi-discusses-us-india-energy-partnership/articleshow/121290374.cms"
 }
 
 # ── Helper Functions ──────────────────────────────────────
