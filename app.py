@@ -654,13 +654,19 @@ def run_analysis(url):
         return False
 
 # ── HEADER ────────────────────────────────────────────────
-# ── HEADER ────────────────────────────────────────────────
 st.markdown("""
 <div class="main-header">
     <div class="main-title">🔍 MediaBiasIQ</div>
-    <div class="main-subtitle">Detect LEFT • CENTER • RIGHT political bias • Sentence-level SHAP explainability • GPT-3.5 neutral rewriter</div>
+    <div class="main-subtitle">AI-powered News Bias Detector • Explainable AI • GPT-3.5 Neutral Rewriter</div>
+    <div style="margin-top:8px;color:#CBD5E1;font-size:1rem;">
+        Detects <strong style="color:#3B82F6;">LEFT</strong> • 
+        <strong style="color:#22C55E;">CENTER</strong> • 
+        <strong style="color:#EF4444;">RIGHT</strong> political bias in any news article
+    </div>
     <div style="margin-top:12px;color:#475569;font-size:0.85rem;">
-        DistilBERT fine-tuned on Faith1712/Allsides_political_bias_proper (17,362 articles) &nbsp;•&nbsp; 85.06% accuracy &nbsp;•&nbsp; GPT-3.5 Rewriter &nbsp;•&nbsp; Explainable AI
+        DistilBERT fine-tuned on Faith1712/Allsides_political_bias_proper (17,362 articles) &nbsp;•&nbsp; 
+        <strong style="color:#22C55E;">85.06% accuracy</strong> &nbsp;•&nbsp; 
+        GPT-3.5 Rewriter &nbsp;•&nbsp; SHAP Explainability
     </div>
 </div>
 """, unsafe_allow_html=True)
