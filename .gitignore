@@ -47,3 +47,6 @@ logs/
 *.tmp
 *.temp
 upload_model.py
+
+dashboard/confusion_matrix.png
+dashboard/metrics.json
