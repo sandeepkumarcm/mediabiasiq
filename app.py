@@ -227,7 +227,7 @@ for k, v in defaults.items():
 EXAMPLE_URLS = {
     "fox": "https://www.foxnews.com/politics",
     "bbc": "https://www.bbc.com/news/world",
-    "ndtv": "https://www.ndtv.com/topic/politics"
+    "ndtv": "https://www.ndtv.com/india-news/siddaramaiah-not-interested-in-taking-rajya-sabha-post-sources-11557464"
 }
 
 # ── Helper Functions ──────────────────────────────────────
@@ -698,10 +698,14 @@ st.divider()
 col_input, col_btn = st.columns([5, 1])
 with col_input:
     url_input = st.text_input(
-        "URL", placeholder="https://www.bbc.com/news/... or https://www.foxnews.com/...",
-        key="url_input", label_visibility="collapsed"
-    )
+        "Enter article URL",
+         placeholder="https://www.bbc.com/news/...",
+         key="url_input",
+         label_visibility="hidden"
+   )
 with col_btn:
+    st.write("")
+    st.write("")
     analyze_btn = st.button("🔍 Analyze", type="primary", use_container_width=True)
 
 # ── Example Buttons ───────────────────────────────────────
@@ -784,18 +788,22 @@ with tab1:
         if extra and extra.get("fear_detected"):
             st.markdown('<div class="fear-warning">🚨 <strong>Fear-Mongering Detected</strong> — This article uses emotionally charged fear language.</div>', unsafe_allow_html=True)
 
-        st.markdown(f"""
-        <div class="glass-card">
-            <div style="font-size:1.3rem;font-weight:700;color:#F1F5F9;margin-bottom:8px;">{article.get('title','Article')}</div>
-            <div style="color:#94A3B8;font-size:0.9rem;">
-                {'👤 ' + ', '.join(article.get('authors',[])) if article.get('authors') else ''}
-                {'&nbsp;&nbsp;📅 ' + str(article.get('publish_date',''))[:10] if article.get('publish_date') else ''}
-                &nbsp;&nbsp;📝 {article.get('word_count',0)} words
-                &nbsp;&nbsp;⏱️ ~{max(1, article.get('word_count',0)//200)} min read
-                &nbsp;&nbsp;🌐 {credibility.get('domain','') if credibility else ''}
-            </div>
-        </div>
-        """, unsafe_allow_html=True)
+        title_safe = article.get('title', 'Article').replace('<', '&lt;').replace('>', '&gt;')
+        authors_html = '👤 ' + ', '.join(article.get('authors', [])) if article.get('authors') else ''
+        date_html = '&nbsp;&nbsp;📅 ' + str(article.get('publish_date', ''))[:10] if article.get('publish_date') else ''
+        domain_html = credibility.get('domain', '') if credibility else ''
+        word_count = article.get('word_count', 0)
+        st.markdown(
+            f'<div class="glass-card">'
+            f'<div style="font-size:1.3rem;font-weight:700;color:#F1F5F9;margin-bottom:8px;">{title_safe}</div>'
+            f'<div style="color:#94A3B8;font-size:0.9rem;">'
+            f'{authors_html}{date_html}'
+            f'&nbsp;&nbsp;📝 {word_count} words'
+            f'&nbsp;&nbsp;⏱️ ~{max(1, word_count//200)} min read'
+            f'&nbsp;&nbsp;🌐 {domain_html}'
+            f'</div></div>',
+            unsafe_allow_html=True
+        )
 
         col_main, col_gauge = st.columns([3, 2])
         with col_main:

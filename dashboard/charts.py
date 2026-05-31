@@ -75,18 +75,16 @@ def bias_score_chart(history: list) -> go.Figure:
             x=0.5
         ),
         xaxis=dict(
-            title="Article",
-            tickfont=dict(color="#CBD5E1"),
-            titlefont=dict(color="#94A3B8"),
-            gridcolor="rgba(255,255,255,0.05)"
-        ),
+        title=dict(text="Article", font=dict(color="#94A3B8")),  # ✅
+        tickfont=dict(color="#CBD5E1"),
+        gridcolor="rgba(255,255,255,0.05)"
+    ),
         yaxis=dict(
-            title="Confidence %",
-            range=[0, 120],
-            tickfont=dict(color="#CBD5E1"),
-            titlefont=dict(color="#94A3B8"),
-            gridcolor="rgba(255,255,255,0.05)"
-        ),
+        title=dict(text="Confidence %", font=dict(color="#94A3B8")),  # ✅
+        range=[0, 120],
+        tickfont=dict(color="#CBD5E1"),
+        gridcolor="rgba(255,255,255,0.05)"
+    ),
         paper_bgcolor="rgba(0,0,0,0)",
         plot_bgcolor="rgba(15,23,42,0.6)",
         height=400,
