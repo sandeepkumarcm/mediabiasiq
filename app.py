@@ -1439,9 +1439,9 @@ with st.sidebar:
     st.markdown("**Links**")
     st.markdown("""
     <div style="color:#94A3B8;font-size:0.85rem;line-height:2;">
-        🐙 <a href="https://github.com/YOURUSERNAME/mediabiasiq" style="color:#3B82F6;">GitHub Repository</a><br>
-        🤗 <a href="https://huggingface.co/spaces/YOURUSERNAME/mediabiasiq" style="color:#3B82F6;">HuggingFace Space</a><br>
-        📄 <a href="https://huggingface.co/YOURUSERNAME/news-bias-distilbert" style="color:#3B82F6;">Model Card</a>
+            🐙 <a href="https://github.com/sandeepkumarcm/mediabiasiq" style="color:#3B82F6;">GitHub Repository</a><br>
+            🤗 <a href="https://huggingface.co/spaces/sandeepcm/mediabiasiq" style="color:#3B82F6;">HuggingFace Space</a><br>
+            📄 <a href="https://huggingface.co/sandeepcm/news-bias-distilbert" style="color:#3B82F6;">Model Card</a>
     </div>
     """, unsafe_allow_html=True)
 
