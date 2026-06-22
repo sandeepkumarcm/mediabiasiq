@@ -42,7 +42,7 @@ def _load_model():
         return False
 
 # Load at import time
-_model_loaded = _load_model()
+_model_loaded = False
 
 
 def _chunk_text(text: str, chunk_size: int = 400) -> list:
@@ -58,12 +58,18 @@ def _chunk_text(text: str, chunk_size: int = 400) -> list:
 
 
 def classify_bias(text: str) -> dict:
+    global _model_loaded
+
+    if not _model_loaded:
+        _model_loaded = _load_model()
+
     error_return = {
         "label": None,
         "confidence": 0,
         "scores": {"LEFT": 0, "CENTER": 0, "RIGHT": 0},
         "error": None
     }
+    
 
     if not _model_loaded:
         error_return["error"] = "Model not loaded. Please run Colab training first."
