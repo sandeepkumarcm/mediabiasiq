@@ -282,7 +282,7 @@ deployed on HuggingFace Spaces.
 ## 👤 Author
 
 **Sandeep Kumar**
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-blue?style=flat&logo=linkedin)](https://linkedin.com/in/YOURPROFILEURL)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-blue?style=flat&logo=linkedin)](https://www.linkedin.com/in/sandeepkumarcm/)
 [![GitHub](https://img.shields.io/badge/GitHub-sandeepkumarcm-black?style=flat&logo=github)](https://github.com/sandeepkumarcm)
 [![HuggingFace](https://img.shields.io/badge/🤗-sandeepcm-orange?style=flat)](https://huggingface.co/sandeepcm)
 
