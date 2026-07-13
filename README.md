@@ -32,12 +32,15 @@ Most people consume news without realizing how word choice, framing, and emotion
 
 
 ### Bias Analysis | Sentence Highlights
-| ![Bias Analysis](assets/bias_analysis.png) | ![Sentence Highlights](assets/sentence_highlights.png) |
+<img width="1882" height="841" alt="Screenshot 2026-07-13 161423" src="https://github.com/user-attachments/assets/66874a01-66af-4410-a50d-c79daae64548" />
+ | <img width="1846" height="840" alt="Screenshot 2026-07-13 162234" src="https://github.com/user-attachments/assets/98bff6bd-8ef6-44e2-8d97-daafa72ca745" />
+|
 |---|---|
 | **Bias Analysis** — LEFT/CENTER/RIGHT classification with confidence score and pie chart | **Sentence Highlights** — SHAP-powered heatmap showing exactly which sentences are biased |
 
 ### Neutral Rewrite | Article Comparison
-| ![Neutral Rewrite](assets/neutral_rewrite.png) | ![Article Comparison](assets/article_comparison.png) |
+| <img width="1841" height="865" alt="Screenshot 2026-07-13 162344" src="https://github.com/user-attachments/assets/bdb851bc-b6b2-44af-9d2c-502f412d0800" />
+ ||
 |---|---|
 | **Neutral Rewrite** — GPT-3.5 rewrites biased sentences. Red = removed, Green = replaced | **Article Comparison** — Two sources, same topic, side-by-side bias verdict |
 
@@ -111,7 +114,8 @@ Evaluated on **3,473 held-out test articles** from the AllSides Political Bias d
 | ➡️ RIGHT | 86.5% | 80.0% | **83.1%** |
 
 ### Evaluation Dashboard
-![Evaluation Dashboard](assets/evaluation_dashboard.png)
+<img width="1862" height="842" alt="Screenshot 2026-07-13 162554" src="https://github.com/user-attachments/assets/7144e565-0c9f-4fb0-bcbe-a37015244971" />
+
 
 ### Model Architecture
 
