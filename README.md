@@ -282,9 +282,6 @@ deployed on HuggingFace Spaces.
 ## 👤 Author
 
 **Sandeep Kumar**
-ML Engineer | NLP | Explainable AI | LLMs
-
-Built for 10 LPA ML Engineer roles — Portfolio Project 2025
 
 [![GitHub](https://img.shields.io/badge/GitHub-sandeepkumarcm-black?style=flat&logo=github)](https://github.com/sandeepkumarcm)
 [![HuggingFace](https://img.shields.io/badge/🤗-sandeepcm-orange?style=flat)](https://huggingface.co/sandeepcm)
