@@ -33,15 +33,14 @@ Most people consume news without realizing how word choice, framing, and emotion
 
 ### Bias Analysis | Sentence Highlights
 <img width="1882" height="841" alt="Screenshot 2026-07-13 161423" src="https://github.com/user-attachments/assets/66874a01-66af-4410-a50d-c79daae64548" />
- | <img width="1846" height="840" alt="Screenshot 2026-07-13 162234" src="https://github.com/user-attachments/assets/98bff6bd-8ef6-44e2-8d97-daafa72ca745" />
-|
-|---|---|
+ | <img width="1835" height="860" alt="Screenshot 2026-07-13 161510" src="https://github.com/user-attachments/assets/a71c6ab9-2658-4566-9a25-e11346426a5a" />
+
 | **Bias Analysis** — LEFT/CENTER/RIGHT classification with confidence score and pie chart | **Sentence Highlights** — SHAP-powered heatmap showing exactly which sentences are biased |
 
 ### Neutral Rewrite | Article Comparison
 | <img width="1841" height="865" alt="Screenshot 2026-07-13 162344" src="https://github.com/user-attachments/assets/bdb851bc-b6b2-44af-9d2c-502f412d0800" />
- ||
-|---|---|
+ |<img width="1846" height="840" alt="Screenshot 2026-07-13 162234" src="https://github.com/user-attachments/assets/ddea4087-c589-41f4-ac12-1f8229eb90ae" />
+|
 | **Neutral Rewrite** — GPT-3.5 rewrites biased sentences. Red = removed, Green = replaced | **Article Comparison** — Two sources, same topic, side-by-side bias verdict |
 
 ---
